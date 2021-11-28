@@ -1,0 +1,24 @@
+{% extends 'main/base.html' %}
+
+{% block title %}
+Розв'язування квадратного рівняння
+{% endblock %}
+
+{% block content %}
+    <h1>Розв'язування квадратного рівняння</h1>
+    <h2>
+        <div class="verybigtext align="left">ax<sup>2</sup> + bx + c = 0</div>
+    </h2>
+    <form method="post">
+        {% csrf_token %}
+        <h5>a:{{ form.a }}</h5>
+        <h5>b:{{ form.b }}</h5>
+        <h5>c:{{ form.c }}</h5>
+        <button type="submit" class="btn btn-success">Порахувати</button>
+        <span>{{ error }}</span> 
+        <div class="alert alert-warning">
+            <h2>Корінь рівняння: {{ root1 }} {{ root2 }}</h2>
+        </div>
+            
+    </form>
+{% endblock %}

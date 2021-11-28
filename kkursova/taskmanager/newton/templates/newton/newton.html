@@ -1,0 +1,30 @@
+{% extends 'main/base.html' %}
+
+{% block title %}
+Метод Ньютона
+{% endblock %}
+
+{% block content %}
+    <h1>Метод Ньютона</h1>
+    <div class="alert alert-danger">
+        <h5>Ця програма обчислює лінійну апроксимацію f(x)
+            в точці xn.<br>
+            знаходить перехоплення x за формулою 
+            x = xn - f(xn) / Df(xn).<br>
+            Доки abs(f(xn)) < epsilon повертає xn.<br>
+            Якщо Df(xn) == 0, повертає None.<br>
+    </div>
+    
+    <form method="post">
+        {% csrf_token %}
+        <h5>Введіть функцію: {{ form.f }}</h5>
+        <h5>Початкове припущення для рішення f(x)=0: {{ form.x0 }}</h5>
+        <!-- <h5>Межа: {{ form.max_iter }}</h5> -->
+        <h5>Точність: {{ form.eps }}</h5>
+        <button type="submit" class="btn btn-success">Порахувати</button>
+        <span>{{ error }}</span> 
+        <div class="alert alert-warning">
+            <h2>Корінь рівняння: {{ root }}</h2>
+        </div> 
+    </form>
+{% endblock %}
