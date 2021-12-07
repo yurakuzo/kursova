@@ -3,9 +3,11 @@ from sympy import *
 from scipy.misc import derivative
 from .forms import NewtonsForm
 
+
 def make_f(f):
     x = symbols('x')
     return lambda a: eval(f).subs(x, a)
+
 
 def newtonMethod(f, x0, eps):
     x0, eps = float(x0), float(eps)
@@ -20,7 +22,6 @@ def newtonMethod(f, x0, eps):
     return x0
     
     
-
 def newton(request):
     error = ''
     form = NewtonsForm()
@@ -37,5 +38,5 @@ def newton(request):
         }
         if form.is_valid():
             form.save()
-    
+
     return render(request, 'newton/newton.html', context)

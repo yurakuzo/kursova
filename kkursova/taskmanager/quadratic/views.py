@@ -30,6 +30,3 @@ def quadratic(request):
     
     return render(request, 'quadratic/quadratic.html', context)
 
-# def newton(request):
-#     return render(request, 'quadratic_equation/newton.html')
-

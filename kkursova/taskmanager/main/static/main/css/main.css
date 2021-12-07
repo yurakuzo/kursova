@@ -1,0 +1,15 @@
+body{
+    background-color: rgb(36, 31, 31);
+    color:#fff;
+}
+.alert{
+    border-color: rgb(0, 0, 0);
+    background-color: rgb(228, 200, 125);
+    width: 40%;
+}
+.danger{
+    width: 50%;
+}
+form{
+    width: 20%;
+}

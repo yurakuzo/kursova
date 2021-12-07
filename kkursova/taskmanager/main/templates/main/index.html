@@ -7,12 +7,12 @@
 
 {% block  content %}
     <h1><main class="px-3">
-    <h1>Вітаю, це мій курсовий проект</h1>
-    <h3 class="lead">На цьому сайті, ви можете розв'язати квадратне рівняння і тд.</h3>
-    </main></h1>
-    <p style="text-align:left; font-size:27px">Історія:</p>
+        <h1>Вітаю, це мій курсовий проект</h1>
+        <h3 class="lead">На цьому сайті, ви можете розв'язати квадратне рівняння будь якого виду та використати метод Ньютона.</h3>
+    </main></h1><br>
+    <p style="text-align:left; font-size:27px">Історія тестової бази данних:</p>
     {% for el in tasks %}
-        <div class="alert alert-warning mt-2">
+        <div class="alert alert-warning mt-1">
             <h3>{{ el.title }}</h3>
             <p>{{ el.task }}</p>
         </div>

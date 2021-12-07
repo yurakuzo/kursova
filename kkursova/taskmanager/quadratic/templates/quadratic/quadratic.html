@@ -13,12 +13,11 @@
         {% csrf_token %}
         <h5>a:{{ form.a }}</h5>
         <h5>b:{{ form.b }}</h5>
-        <h5>c:{{ form.c }}</h5>
-        <button type="submit" class="btn btn-success">Порахувати</button>
+        <h5>c:{{ form.c }}</h5><br>
+        <button type="submit" class="btn btn-success">Порахувати</button><br>
         <span>{{ error }}</span> 
-        <div class="alert alert-warning">
-            <h2>Корінь рівняння: {{ root1 }} {{ root2 }}</h2>
-        </div>
-            
-    </form>
+    </form><br>
+    <div class="alert alert-warning">
+        <h2>Корені рівняння:<br>x1={{ root1 }}<br>x2={{ root2 }}</h2>
+    </div>
 {% endblock %}
