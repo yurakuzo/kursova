@@ -3,7 +3,6 @@ from .models import Quadratics
 from .forms import QuadraticsForm
 
 
-
 def getRoots(a, b, c):
     from cmath import sqrt
     a, b, c = float(a), float(b), float(c)

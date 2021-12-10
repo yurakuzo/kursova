@@ -2,6 +2,7 @@ from django.shortcuts import render
 from sympy import *
 from scipy.misc import derivative
 from .forms import NewtonsForm
+from math import *
 
 
 def make_f(f):

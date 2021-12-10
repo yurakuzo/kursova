@@ -4,7 +4,7 @@ body{
 }
 .alert{
     border-color: rgb(0, 0, 0);
-    background-color: rgb(228, 200, 125);
+    background-color: #e4c87d;
     width: 40%;
 }
 .danger{
@@ -12,4 +12,10 @@ body{
 }
 form{
     width: 20%;
+}
+.link
+{
+   color:rgb(110, 110, 110);
+   text-decoration: none; 
+   background-color: none;
 }

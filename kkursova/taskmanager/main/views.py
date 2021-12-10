@@ -4,7 +4,7 @@ from .forms import TaskForm
 
 
 def index(request):
-    tasks = Task.objects.all()
+    tasks = Task.objects.all()[::-1]
     return render(request, 'main/index.html', {'title' : 'Головна сторінка сайту', 'tasks': tasks})
 
 def about(request):
